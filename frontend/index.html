@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Document Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="/app/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div>
+
+            <h1>
+                AI Document Assistant
+            </h1>
+
+            <p>
+                Upload documents and ask questions
+            </p>
+
+        </div>
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            Online
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <div class="main-layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <h2>
+                Documents
+            </h2>
+
+
+            <div class="upload-box">
+
+                <input
+                    type="file"
+                    id="documentInput"
+                    accept=".pdf,.txt"
+                >
+
+
+                <button
+                    id="uploadButton"
+                    type="button"
+                >
+                    Upload Document
+                </button>
+
+            </div>
+
+
+            <div id="uploadStatus"></div>
+
+
+            <div
+                id="documentList"
+                class="document-list"
+            >
+
+                <p class="empty-message">
+                    No documents uploaded.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= CHAT ================= -->
+
+        <main class="chat-container">
+
+
+            <!-- Chat messages -->
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+                <div class="message assistant">
+
+                    <div class="message-content">
+
+                        <strong>
+                            AI Assistant
+                        </strong>
+
+                        <p>
+                            Hello! Upload a PDF or TXT
+                            document and ask me questions
+                            about it.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Typing indicator -->
+
+            <div
+                class="typing-indicator hidden"
+                id="typingIndicator"
+            >
+
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+
+                <span class="typing-text">
+                    AI is thinking...
+                </span>
+
+            </div>
+
+
+            <!-- Input area -->
+
+            <div class="input-area">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Ask a question..."
+                    rows="1"
+                ></textarea>
+
+
+                <button
+                    id="sendButton"
+                    type="button"
+                >
+                    Send
+                </button>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<script src="/app/script.js"></script>
+
+</body>
+
+</html>
+
